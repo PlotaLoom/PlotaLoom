@@ -1,0 +1,27 @@
+# Compiled Python files
+*.pyc
+__pycache__/
+
+# Local development files
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+static/
+
+# Virtual environment files
+.venv/
+env/
+
+# Test coverage reports
+.coverage
+
+# Logs
+*.log
+
+# Editor temporary files
+*.swp
+
+# Documentation
+docs/_build/
+Explanation:
