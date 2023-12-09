@@ -1,9 +1,12 @@
 import "./App.css";
-import Test from "./components/Test";
+import Navbar from "./components/Navbar";
+import Home from "./components/aadhar";
+
 function App() {
   return (
     <div>
-      <Test />
+      <Navbar />
+      <Home />
     </div>
   );
 }
