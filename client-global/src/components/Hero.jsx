@@ -1,11 +1,16 @@
 import React from 'react'
+import Home from './pages/Home'
+import LiveAuction from './pages/LiveAuction'
+import Flow from './pages/Flow'
 
-const Main = () => {
+const Hero = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+    <Home />
+    <LiveAuction/>
+    <Flow />
+    </>
   )
 }
 
-export default Main
+export default Hero

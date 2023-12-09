@@ -8,17 +8,17 @@ import React from "react";
     
           <ul className="flex justify-center">
             <li>
-              <a href="/" className="text-purple-600 text-lg mr-2 font-medium hover:underline">
+              <a href="/" className="text-purple-600 text-lg mr-3 font-medium hover:underline">
                 Home
               </a>
             </li>
             <li>
-              <a href="/market" className="text-purple-600 text-lg mr-2 font-medium hover:underline">
+              <a href="/market" className="text-purple-600 text-lg mr-3 font-medium hover:underline">
                 Market
               </a>
             </li>
             <li>
-              <a href="/create" className="text-purple-600 text-lg mr-2 font-medium hover:underline">
+              <a href="/create" className="text-purple-600 text-lg mr-3 font-medium hover:underline">
                 Create
               </a>
             </li>
