@@ -7,7 +7,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from datetime import datetime, timedelta, timezone
 
-API_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub25jZSI6IjE1NGVkYWRmLTBkMDUtNDU2MC1hYzg5LWUwNzMxZTMwMDk5NyIsIm9yZ0lkIjoiMzY3NDM4IiwidXNlcklkIjoiMzc3NjMxIiwidHlwZUlkIjoiMDUyMjkxYzctMzVmNS00NmM5LWIwMTktNjNhNTM3Yjk5M2E0IiwidHlwZSI6IlBST0pFQ1QiLCJpYXQiOjE3MDIwNjA2MTAsImV4cCI6NDg1NzgyMDYxMH0.Zf7LNS2KHp0IMaomHDoSN8mBCx3z7_LqwLvtddlLaXI'
+API_KEY = 'WEB3_API_KEY_HERE'
 # this is a check to make sure the API key was set
 # you have to set the API key only in line 9 above
 # you don't have to change the next line
@@ -15,6 +15,8 @@ if API_KEY == 'WEB3_API_KEY_HERE':
     print("API key is not set")
     raise SystemExit
 
+def index(request):
+    return redirect('/moralis_auth')
 
 def moralis_auth(request):
     return render(request, 'web3_auth/login.html')
@@ -23,12 +25,15 @@ def my_profile(request):
     return render(request, 'web3_auth/profile.html', {})
 
 def request_message(request):
-    data = json.loads(request.body)
-    print(data)
+    try:
+        data = json.loads(request.body)
+        print(data)
+    except json.JSONDecodeError as e:
+        return JsonResponse({'error': 'Invalid JSON data or empty request body'}, status=400)
 
     #setting request expiration time to 1 minute after the present->
     present = datetime.now(timezone.utc)
-    present_plus_one_m = present + timedelta(minutes=1)
+    present_plus_one_m = present + timedelta(minutes=3)
     expirationTime = str(present_plus_one_m.isoformat())
     expirationTime = str(expirationTime[:-6]) + 'Z'
 
@@ -41,7 +46,7 @@ def request_message(request):
       "uri": "https://defi.finance/",
       "expirationTime": expirationTime,
       "notBefore": "2020-01-01T00:00:00.000Z",
-      "timeout": 15
+      "timeout": 30
     }
     x = requests.post(
         REQUEST_URL,
@@ -52,9 +57,11 @@ def request_message(request):
 
 
 def verify_message(request):
-    data = json.loads(request.body)
-    print(data)
-
+    try:
+        data = json.loads(request.body)
+        print(data)
+    except json.JSONDecodeError as e:
+        return JsonResponse({'error': 'Invalid JSON data or empty request body'}, status=400)
     REQUEST_URL = 'https://authapi.moralis.io/challenge/verify/evm'
     x = requests.post(
         REQUEST_URL,
