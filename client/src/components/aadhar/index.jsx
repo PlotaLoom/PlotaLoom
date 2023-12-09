@@ -24,14 +24,14 @@ export default function Home() {
       </main>
       <div className="flex flex-col items-center gap-4 rounded-2xl max-w-screen-sm mx-auto p-8">
         {/* Render the proof if generated and valid */}
-        if (anonAadhaar?.status === "logged-in") {
-    <>
-      <p>✅ Proof is valid</p>
-      <p>Got your Aadhaar Identity Proof</p>
-      <p>Welcome anon!</p>
-      <AnonAadhaarProof code={JSON.stringify(anonAadhaar.pcd, null, 2)} />
-    </>
-} 
+        {anonAadhaar?.status === "logged-in" && (
+          <>
+            <p>✅ Proof is valid</p>
+            <p>Got your Aadhaar Identity Proof</p>
+            <p>Welcome anon!</p>
+            <AnonAadhaarProof code={JSON.stringify(anonAadhaar.pcd, null, 2)} />
+          </>
+        )}
 
       </div>
     </div>
