@@ -9,7 +9,7 @@ const Home = () => {
         loop
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="your-video-file.mp4" type="video/mp4" />
+        <source src="./public/4.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="flex flex-col justify-center items-center h-full relative z-10">
