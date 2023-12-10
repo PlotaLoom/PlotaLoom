@@ -1,16 +1,26 @@
-import React from 'react'
-import Home from './pages/Home'
-import LiveAuction from './pages/LiveAuction'
-import Flow from './pages/Flow'
+import React, { useState } from 'react';
+import Home from './pages/Home';
+import LiveAuction from './pages/LiveAuction';
+import Flow from './pages/Flow';
+import Navbar from './Navbar'; // Import your Navbar component
 
 const Hero = () => {
+  const [isLoggedIn, setLoggedIn] = useState(false);
+
+  // Assuming you have a function to handle login status changes
+  const handleLogin = () => {
+    // Logic to handle login status change
+    setLoggedIn(!isLoggedIn);
+  };
+
   return (
     <>
-    <Home />
-    <LiveAuction/>
-    <Flow />
+      <Navbar isLoggedIn={isLoggedIn} handleLogin={handleLogin} />
+      {isLoggedIn && <Home />}
+      <LiveAuction />
+      <Flow />
     </>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

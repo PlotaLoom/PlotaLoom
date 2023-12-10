@@ -2,7 +2,7 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div className="flex flex-col justify-center items-center h-screen bg-gradient-to-r from-purple-500 to-blue-500">
+    <div className="flex flex-col justify-center items-center h-screen bg-lime-600">
         <div className="text-center">
           <h1 className="text-white text-6xl font-bold">Discover rare digital art and collect<br />sell extraordinary NFTs</h1>
           <p className="text-white text-2xl mt-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti excepturi omnis neque<br />adipisci sequi ullam unde in minus quis quos.</p>

@@ -1,5 +1,5 @@
 @layer base {
     body {
-      @apply bg-slate-700;
+      @apply bg-neutral-950;
     }
   }
