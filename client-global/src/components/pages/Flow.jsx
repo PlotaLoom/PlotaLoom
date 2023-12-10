@@ -1,9 +1,6 @@
-
-import React from 'react';
-
 const Flow = () => {
   return (
-    <div className="flex flex-col items-center justify-center  bg-lime-600">
+    <div className="flex flex-col items-center justify-enter  bg-black">
       <h1 className="text-3xl font-bold mb-4">Create and sell your NFTs</h1>
       <div className="flex flex-row flex-wrap justify-center">
         <div className="w-1/4 p-4">
