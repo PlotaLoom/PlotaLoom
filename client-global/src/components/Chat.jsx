@@ -1,7 +1,7 @@
 import { ChatView, ChatUIProvider, darkChatTheme } from "@pushprotocol/uiweb";
 import { ethers } from "ethers";
 export default function App() {
-  const pushAIWalletAddress="0xCd24E9273212164035013A1aa56a0Eb7A806f702";
+  const pushAIWalletAddress = "0xCd24E9273212164035013A1aa56a0Eb7A806f702";
   const PushChatTheme = {
     borderRadius: {
       ChatView: "32px",
@@ -136,13 +136,19 @@ export default function App() {
 
   return (
     <>
-      <h2>Live chat with custom theme and token gated</h2>
       <div
         style={{
           height: "75vh",
           margin: "20px auto",
           background: "black",
           borderRadius: "40px",
+          maxWidth: "600px",
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: "10vh",
+
         }}
       >
         <ChatUIProvider theme={darkChatTheme}>
@@ -156,6 +162,5 @@ export default function App() {
         </ChatUIProvider>
       </div>
     </>
-);
-
+  );
 }

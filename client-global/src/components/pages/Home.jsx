@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Home = () => {
   return (
@@ -19,9 +19,11 @@ const Home = () => {
           </h1>
         </div>
         <div className="flex flex-row justify-center items-center">
+          <a href= "https://rudrakshkarpe.hashnode.dev/plotaloom-a-game-changer-in-private-property-dealings">
           <button className="bg-white text-purple-500 font-bold py-2 px-4 rounded">
             Explore
           </button>
+          </a>
         </div>
       </div>
     </div>
@@ -29,6 +31,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
-  

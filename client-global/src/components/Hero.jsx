@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Home from "./pages/Home";
 import LiveAuction from "./pages/LiveAuction";
-import Flow from "./pages/Flow";
-import Navbar from "./Navbar"; // Import your Navbar component
+
+import Navbar from "./Navbar";
 
 const Hero = () => {
   const [isLoggedIn, setLoggedIn] = useState(false);
@@ -18,7 +18,6 @@ const Hero = () => {
       <Navbar isLoggedIn={isLoggedIn} handleLogin={handleLogin} />
       {isLoggedIn ? null : <Home />}
       {isLoggedIn && <LiveAuction />}
-      {isLoggedIn && <Flow />}
     </>
   );
 };

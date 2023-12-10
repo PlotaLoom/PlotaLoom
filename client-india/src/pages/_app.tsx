@@ -3,7 +3,7 @@ import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
 import { AnonAadhaarProvider } from "anon-aadhaar-react";
 
-const app_id = process.env.NEXT_PUBLIC_APP_ID || "";
+const app_id = "216163516529820798950096626185565726103604035584";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [ready, setReady] = useState<boolean>(false);
