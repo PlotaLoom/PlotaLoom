@@ -10,9 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@pushprotocol/uiweb": "^1.1.22",
     "anon-aadhaar-react": "^0.1.13",
+    "ethers": "^5.7.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.1",
     "reactstrap": "^9.2.1"
   },
   "devDependencies": {
