@@ -7,7 +7,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from datetime import datetime, timedelta, timezone
 
-API_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub25jZSI6IjYwMDA0MjIxLWNlN2UtNGE0My1hZDJlLThiZjYyNGM1ODc4NiIsIm9yZ0lkIjoiMzY3NDM4IiwidXNlcklkIjoiMzc3NjMxIiwidHlwZSI6IlBST0pFQ1QiLCJ0eXBlSWQiOiIwNTIyOTFjNy0zNWY1LTQ2YzktYjAxOS02M2E1MzdiOTkzYTQiLCJpYXQiOjE3MDIwODIzMzUsImV4cCI6NDg1Nzg0MjMzNX0.j5eAmZj_x4M-Q-q0S52m35nAagBuaOu2P_Cv0KPg28Y'
+API_KEY = 'WEB3_API_KEY_HERE'
 # this is a check to make sure the API key was set
 # you have to set the API key only in line 9 above
 # you don't have to change the next line
