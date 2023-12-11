@@ -11,7 +11,8 @@
 
     {% if user.is_authenticated %}
         <h1>Welcome Moralis Web3 User, {{ user.username }} !</h1>
-        <a href="{% url 'logout' %}?next={% url 'moralis_auth' %}">Logout</a>
+        <a href="http://localhost:5173/">Logout</a>
+        <a href={% url "logout" %}>Logout</a>
         <br/>
         <a href="{% url 'my_profile' %}"> My profile </a>
     {% else %}

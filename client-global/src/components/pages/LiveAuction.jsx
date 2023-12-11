@@ -6,9 +6,9 @@ const LiveAuction = () => {
   const [selectedItem, setSelectedItem] = useState(null);
 
   const items = [
-    { id: 1, imageSrc: "./public/1.jpeg", location: "Mumbai", price: "20 ETH" },
-    { id: 2, imageSrc: "./public/2.jpeg", location: "Bangalore", price: "30 ETH" },
-    { id: 3, imageSrc: "./public/3.jpeg", location: "Delhi", price: "10 ETH" },
+    { id: 1, imageSrc: "/static/1.jpeg", location: "Mumbai", price: "20 ETH" },
+    { id: 2, imageSrc: "/static/2.jpeg", location: "Bangalore", price: "30 ETH" },
+    { id: 3, imageSrc: "/static/3.jpeg", location: "Delhi", price: "10 ETH" },
   ];
 
   const handleUnlock = (item) => {
