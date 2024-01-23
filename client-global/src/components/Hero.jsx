@@ -10,7 +10,7 @@ const Hero = () => {
   // Assuming you have a function to handle login status changes
   const handleLogin = () => {
     // Logic to handle login status change
-    setLoggedIn(!isLoggedIn);
+    setLoggedIn(isLoggedIn => !isLoggedIn);
   };
 
   return (

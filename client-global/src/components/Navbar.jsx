@@ -1,7 +1,6 @@
 import {Link} from "react-router-dom";
 import { useState } from "react";
-const Navbar = () => {
-  const [isLoggedIn,handleLogin] = useState(false);
+const Navbar = ({ isLoggedIn, handleLogin }) => {
 
   return (
     <nav className="flex items-center justify-between bg-black p-4">
