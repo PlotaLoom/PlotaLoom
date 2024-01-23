@@ -17,7 +17,7 @@ const Navbar = ({ isLoggedIn, handleLogin }) => {
       >
   
         
-        {isLoggedIn ? "Logout" : "Login"}
+  {isLoggedIn ? "Disconnect Wallet" : "Connect Wallet"}
      
       
     
